@@ -27,6 +27,21 @@ $(document).ready(function() {
     return sen[senIndex] + reverseCapital(sen);
   }
 
-  alert(scramble(sentence));
+  function revAll(sen) {
+    var fullSent = scramble(sen);
+    
+    var count = fullSent.length;
+    var newSent = "";
+    while (count > 0) {
+      newSent += fullSent[count - 1];
+      count--;
+
+    }
+
+    return newSent;
+
+  }
+
+  alert(revAll(sentence));
 
 });
