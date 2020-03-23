@@ -1,0 +1,71 @@
+h1 {
+  text-align: center;
+  color: salmon;
+  font-weight: bold;
+}
+
+body {
+  background-color: yellow;
+}
+
+.row {
+  text-align: center;
+}
+
+img {
+  border: solid 3px darkblue;
+}
+
+#scramP {
+  color: purple;
+  font-family: cursive; 
+}
+
+#oriP {
+  color: red;
+  font-family: fantasy;
+}
+
+
+
+@keyframes bgcolor {
+  0% {
+      background-color: #45a3e5
+  }
+
+  30% {
+      background-color: #66bf39
+  }
+
+  60% {
+      background-color: #eb670f
+  }
+
+  90% {
+      background-color: #f35
+  }
+
+  100% {
+      background-color: #864cbf
+  }
+}
+
+.partyBody {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.ope {
+  opacity: 80%;
+}
+
+.btn-primary {
+  background-color: peru;
+  border: none;
+}
+
+script {
+  display: none;
+}

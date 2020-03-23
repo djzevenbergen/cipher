@@ -49,4 +49,9 @@ $(document).ready(function() {
     document.getElementById("oriP").innerHTML = "<p></p>";
     document.getElementById("scramP").innerHTML ="Your sentence scrambled: " + revAll(sentence);
   });
+
+  document.getElementById("partyButton").addEventListener("click", function(){            
+    $("body").toggleClass("partyBody");
+    $("#ope").toggleClass("ope");
+    });
 });
