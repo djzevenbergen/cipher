@@ -35,13 +35,19 @@ $(document).ready(function() {
     while (count > 0) {
       newSent += fullSent[count - 1];
       count--;
-
     }
 
     return newSent;
 
   }
 
-  alert(revAll(sentence));
+  $("#original").click(function() {
+    alert("Original Sentence: " + sentence)
+  })
+
+  $("#scramble").click(function() {
+    alert("Scrambled Sentence: " + revAll(sentence));
+  })
+  
 
 });
