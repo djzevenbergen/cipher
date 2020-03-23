@@ -3,16 +3,30 @@ $(document).ready(function() {
   console.log(sentence);
   function capitalize(sen) {
     var sent = sen;
-    
     var firstChar = sent.charAt(0).toUpperCase();
-    var midSent = sent.slice(1, (sent.length - 1));
     var lastChar = sent.charAt(sent.length - 1).toUpperCase();
-
-    var newSent = firstChar + midSent + lastChar;
+    var newSent = firstChar + lastChar;
 
     return newSent;
   }
 
-  alert(capitalize(sentence));
+  function reverseFirstLast(sen) {
+    var sent = sen;
+    var firstChar = sent.charAt(0);
+    var lastChar = sent.charAt(sent.length -1);
+    return lastChar + firstChar
+  }
+
+  function reverseCapital(sen) {
+    return sen + capitalize(reverseFirstLast(sen));
+  }
+
+  function scramble(sen) {
+    var senLength = sen.length;
+    var senIndex = ((senLength - 1) / 2).toFixed(); 
+    return sen[senIndex] + reverseCapital(sen);
+  }
+
+  alert(scramble(sentence));
 
 });
