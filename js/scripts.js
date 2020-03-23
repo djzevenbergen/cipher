@@ -38,16 +38,15 @@ $(document).ready(function() {
     }
 
     return newSent;
-
   }
-
+  
   $("#original").click(function() {
-    alert("Original Sentence: " + sentence)
-  })
+    document.getElementById("scramP").innerHTML = "<p></p>";
+    document.getElementById("oriP").innerHTML = "Your rEGGular sentence: " + sentence;
+  });
 
   $("#scramble").click(function() {
-    alert("Scrambled Sentence: " + revAll(sentence));
-  })
-  
-
+    document.getElementById("oriP").innerHTML = "<p></p>";
+    document.getElementById("scramP").innerHTML ="Your sentence scrambled: " + revAll(sentence);
+  });
 });
